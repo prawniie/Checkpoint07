@@ -1,0 +1,64 @@
+﻿<style>
+    img {
+        width: 100px;
+        margin-right: 30px;
+        cursor: pointer;
+        user-select: none;
+    }
+</style>
+
+<div id="images"></div>
+
+
+<script>
+    let list = [1,1,1,1];
+    let images = document.getElementById("images");
+    let box = document.getElementById("box");
+
+    let eggOpenImg = "img/egg2-open.png";
+    let eggClosedImg = "img/egg1-closed.png";
+    let eggDoubleImg = "img/egg3-double.png";
+
+    function reDrawEggs() {
+        for (const element of list) {
+            let img = document.createElement("img")
+            img.src = eggClosedImg;
+
+            img.addEventListener("click", () => {
+                //changeEggImg(); //Funkar ej
+                //reDrawEggs(); //Ska skriva ut det nya ägget
+                img.src = eggOpenImg; //Funkar
+           });
+
+            images.appendChild(img)
+        };
+    }
+
+    let eggStatus = 0;
+
+    let egg;
+
+    function changeEggImg(img) {
+
+        if (eggStatus >= eggs.length)
+            eggStatus = 0;
+
+        if (eggStatus == 0) {
+            img.src = eggOpenImg;
+            eggStatus++;
+        }
+        else if (eggStatus == 1) {
+            img.src = eggDoubleImg;
+            eggStatus++;
+        }
+        else if (eggStatus == 2) {
+            img.src = eggClosedImg;
+            list.push(1); //Sätter ägget som stängt och skapar ett nytt ägg i listan
+            //Hmm fast ska ej läggas längst bak utan bredvid elementet som trycks på
+            eggStatus++;
+        }
+    }
+
+    reDrawEggs();
+
+</script>
