@@ -53,7 +53,6 @@
         let eggOpenImg = "img/egg2-open.png";
         let eggDoubleImg = "img/egg3-double.png";
 
-
         let changeEgg1 = document.getElementById("changeEgg1");
         let changeEgg2 = document.getElementById("changeEgg2");
         let changeEgg3 = document.getElementById("changeEgg3");
@@ -66,88 +65,122 @@
 
         let eggIndex = 0;
 
-        function findIndexOfEgg() {
+        //function findEggToChange() {
+        //    let eggToChange = 'egg';
 
-        }
+        //}
 
-        function changeEggImg1() {
+        //function updateStatus() {
+        //    let eggToChange = 'egg';
 
-            if (eggStatus >= eggs.length)
-                eggStatus = 0;
+        //    if (eggIndex >= eggs.length)
+        //        eggIndex = 0;
 
-            if (eggStatus == 0) {
-                egg1.src = eggOpenImg;
-                eggStatus++;
-            }
-            else if (eggStatus == 1) {
-                egg1.src = eggDoubleImg;
-                eggStatus++;
-            }
-            else if (eggStatus == 2) {
-                egg1.src = eggClosedImg;
-                eggStatus++;
-            }
-        }
+        //    eggIndex++;
+        //    egg = eggToChange + eggIndex;
 
+        //    //document.getElementById(egg).src = eggOpenImg;
 
-        function changeEggImg2() {
+        //}
+
+        function changeEggImg(egg) {
 
             if (eggStatus >= eggs.length)
                 eggStatus = 0;
 
             if (eggStatus == 0) {
-                egg2.src = eggOpenImg;
+                document.getElementById(egg).src = eggOpenImg;
                 eggStatus++;
             }
             else if (eggStatus == 1) {
-                egg2.src = eggDoubleImg;
+                document.getElementById(egg).src = eggDoubleImg;
                 eggStatus++;
             }
             else if (eggStatus == 2) {
-                egg2.src = eggClosedImg;
+                document.getElementById(egg).src = eggClosedImg;
                 eggStatus++;
             }
         }
 
+        //let eggNumber = 1;
 
-        function changeEggImg3() {
+        //function changeEggImg1() {
 
-            if (eggStatus >= eggs.length)
-                eggStatus = 0;
+        //    if (eggStatus >= eggs.length)
+        //        eggStatus = 0;
 
-            if (eggStatus == 0) {
-                egg3.src = eggOpenImg;
-                eggStatus++;
-            }
-            else if (eggStatus == 1) {
-                egg3.src = eggDoubleImg;
-                eggStatus++;
-            }
-            else if (eggStatus == 2) {
-                egg3.src = eggClosedImg;
-                eggStatus++;
-            }
-        }
-
-        changeEgg1.addEventListener("click", changeEggImg1);
-        changeEgg2.addEventListener("click", changeEggImg2);
-        changeEgg3.addEventListener("click", changeEggImg3);
+        //    if (eggStatus == 0) {
+        //        egg1.src = eggOpenImg;
+        //        eggStatus++;
+        //    }
+        //    else if (eggStatus == 1) {
+        //        egg1.src = eggDoubleImg;
+        //        eggStatus++;
+        //    }
+        //    else if (eggStatus == 2) {
+        //        egg1.src = eggClosedImg;
+        //        eggStatus++;
+        //    }
+        //}
 
 
-        function updateStatus() {
-            let eggToChange = 'egg';
+        //function changeEggImg2() {
 
-            if (eggsIndex >= eggs.length)
-                eggsIndex = 0;
+        //    if (eggStatus >= eggs.length)
+        //        eggStatus = 0;
 
-            eggsIndex++;
-            egg = eggToChange + eggsIndex;
+        //    if (eggStatus == 0) {
+        //        egg2.src = eggOpenImg;
+        //        eggStatus++;
+        //    }
+        //    else if (eggStatus == 1) {
+        //        egg2.src = eggDoubleImg;
+        //        eggStatus++;
+        //    }
+        //    else if (eggStatus == 2) {
+        //        egg2.src = eggClosedImg;
+        //        eggStatus++;
+        //    }
+        //}
 
-            document.getElementById(egg).src = eggOpenImg;
 
-        }
+        //function changeEggImg3() {
 
-        let eggNumber = 1;
+        //    if (eggStatus >= eggs.length)
+        //        eggStatus = 0;
+
+        //    if (eggStatus == 0) {
+        //        egg3.src = eggOpenImg;
+        //        eggStatus++;
+        //    }
+        //    else if (eggStatus == 1) {
+        //        egg3.src = eggDoubleImg;
+        //        eggStatus++;
+        //    }
+        //    else if (eggStatus == 2) {
+        //        egg3.src = eggClosedImg;
+        //        eggStatus++;
+        //    }
+        //}
+
+        changeEgg1.addEventListener("click", () => {
+            changeEggImg("egg1");
+        });
+
+        changeEgg2.addEventListener("click", () => {
+            changeEggImg("egg2");
+        });
+
+        changeEgg3.addEventListener("click", () => {
+            changeEggImg("egg3");
+        });
+
+        //changeEgg1.addEventListener("click", changeEggImg1);
+        //changeEgg2.addEventListener("click", changeEggImg2);
+        //changeEgg3.addEventListener("click", changeEggImg3);
+
+
+
 
         //changeEgg1.addEventListener("click", () => {
         //    changeEggImg();
