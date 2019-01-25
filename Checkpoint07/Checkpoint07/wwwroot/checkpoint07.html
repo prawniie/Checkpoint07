@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>checkpoint07</title>
+
+    <style>
+        img {
+            width: 100px;
+            margin-right: 30px;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="placeForEggs">
+
+        <img id="egg1" src="img/egg1-closed.png" />
+        <img id="egg2" src="img/egg1-closed.png" />
+        <img id="egg3" src="img/egg1-closed.png" />
+
+        <button id="changeEgg1">Click to change egg1</button>
+
+    </div>
+
+    <script>
+
+        let egg1 = document.getElementById("egg1");
+        let egg2 = document.getElementById("egg2");
+        let egg3 = document.getElementById("egg3");
+
+        let eggClosedImg = "img/egg1-closed.png";
+        let eggOpenImg = "img/egg2-open.png";
+
+
+        let changeEgg1 = document.getElementById("changeEgg1");
+
+        let eggStatus = [1, 2, 3];
+
+        function updateStatus() {
+
+        }
+
+        function changeEggImg() {
+            alert('changing egg');
+            egg1.src = eggOpenImg;
+        }
+
+        changeEgg1.addEventListener("click", changeEggImg);
+
+
+    </script>
+
+</body>
+</html>
