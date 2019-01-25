@@ -11,7 +11,9 @@
             user-select: none;
         }
     </style>
+
 </head>
+
 <body>
 
     <div id="placeForEggs">
@@ -20,34 +22,9 @@
         <a id="changeEgg2"><img id="egg2" src="img/egg1-closed.png" /></a>
         <a id="changeEgg3"><img id="egg3" src="img/egg1-closed.png" /></a>
 
-        <!--<a id="testing"></a> Kan ej ta bort denna ännu..-->
-
-
-
-
-        <!--Den gamla koden
-            
-            <img id="egg1" src="img/egg1-closed.png" />
-    <img id="egg2" src="img/egg1-closed.png" />
-    <img id="egg3" src="img/egg1-closed.png" />
-
-    <button id="changeEgg1">Click to change egg1</button>
-    <button id="changeEgg2">Click to change egg2</button>
-    <button id="changeEgg3">Click to change egg3</button>-->
-
-
     </div>
 
     <script>
-
-        //let testing = document.getElementById("testing");
-        //testing.addEventListener("click", () => {
-        //    alert('this might work!!');
-        //});
-
-        let egg1 = document.getElementById("egg1");
-        let egg2 = document.getElementById("egg2");
-        let egg3 = document.getElementById("egg3");
 
         let eggClosedImg = "img/egg1-closed.png";
         let eggOpenImg = "img/egg2-open.png";
@@ -57,31 +34,11 @@
         let changeEgg2 = document.getElementById("changeEgg2");
         let changeEgg3 = document.getElementById("changeEgg3");
 
-
-        let eggs = ['1', '2', '3'];
+        let eggs = [1,2,3];
         let eggStatus = 0;
 
         let egg;
 
-        let eggIndex = 0;
-
-        //function findEggToChange() {
-        //    let eggToChange = 'egg';
-
-        //}
-
-        //function updateStatus() {
-        //    let eggToChange = 'egg';
-
-        //    if (eggIndex >= eggs.length)
-        //        eggIndex = 0;
-
-        //    eggIndex++;
-        //    egg = eggToChange + eggIndex;
-
-        //    //document.getElementById(egg).src = eggOpenImg;
-
-        //}
 
         function changeEggImg(egg) {
 
@@ -102,67 +59,6 @@
             }
         }
 
-        //let eggNumber = 1;
-
-        //function changeEggImg1() {
-
-        //    if (eggStatus >= eggs.length)
-        //        eggStatus = 0;
-
-        //    if (eggStatus == 0) {
-        //        egg1.src = eggOpenImg;
-        //        eggStatus++;
-        //    }
-        //    else if (eggStatus == 1) {
-        //        egg1.src = eggDoubleImg;
-        //        eggStatus++;
-        //    }
-        //    else if (eggStatus == 2) {
-        //        egg1.src = eggClosedImg;
-        //        eggStatus++;
-        //    }
-        //}
-
-
-        //function changeEggImg2() {
-
-        //    if (eggStatus >= eggs.length)
-        //        eggStatus = 0;
-
-        //    if (eggStatus == 0) {
-        //        egg2.src = eggOpenImg;
-        //        eggStatus++;
-        //    }
-        //    else if (eggStatus == 1) {
-        //        egg2.src = eggDoubleImg;
-        //        eggStatus++;
-        //    }
-        //    else if (eggStatus == 2) {
-        //        egg2.src = eggClosedImg;
-        //        eggStatus++;
-        //    }
-        //}
-
-
-        //function changeEggImg3() {
-
-        //    if (eggStatus >= eggs.length)
-        //        eggStatus = 0;
-
-        //    if (eggStatus == 0) {
-        //        egg3.src = eggOpenImg;
-        //        eggStatus++;
-        //    }
-        //    else if (eggStatus == 1) {
-        //        egg3.src = eggDoubleImg;
-        //        eggStatus++;
-        //    }
-        //    else if (eggStatus == 2) {
-        //        egg3.src = eggClosedImg;
-        //        eggStatus++;
-        //    }
-        //}
-
         changeEgg1.addEventListener("click", () => {
             changeEggImg("egg1");
         });
@@ -174,22 +70,6 @@
         changeEgg3.addEventListener("click", () => {
             changeEggImg("egg3");
         });
-
-        //changeEgg1.addEventListener("click", changeEggImg1);
-        //changeEgg2.addEventListener("click", changeEggImg2);
-        //changeEgg3.addEventListener("click", changeEggImg3);
-
-
-
-
-        //changeEgg1.addEventListener("click", () => {
-        //    changeEggImg();
-        //    updateStatus();
-        //});
-        //changeEgg2.addEventListener("click", changeEggImg(2));
-        //changeEgg3.addEventListener("click", changeEggImg(3));
-
-
 
     </script>
 
