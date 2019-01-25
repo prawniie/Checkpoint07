@@ -21,6 +21,9 @@
         <img id="egg3" src="img/egg1-closed.png" />
 
         <button id="changeEgg1">Click to change egg1</button>
+        <button id="changeEgg2">Click to change egg2</button>
+        <button id="changeEgg3">Click to change egg3</button>
+
 
     </div>
 
@@ -35,19 +38,36 @@
 
 
         let changeEgg1 = document.getElementById("changeEgg1");
+        let changeEgg2 = document.getElementById("changeEgg2");
+        let changeEgg3 = document.getElementById("changeEgg3");
+
 
         let eggStatus = [1, 2, 3];
+
+        let egg;
+
 
         function updateStatus() {
 
         }
 
-        function changeEggImg() {
+        let eggNumber = 1;
+
+        function changeEggImg(eggNumber) {
             alert('changing egg');
-            egg1.src = eggOpenImg;
+
+            let eggToChange = 'egg';
+            egg = eggToChange + 2;
+
+            document.getElementById(egg).src = eggOpenImg;
+
+            //egg1.src = eggOpenImg;
         }
 
         changeEgg1.addEventListener("click", changeEggImg);
+        //changeEgg2.addEventListener("click", changeEggImg(2));
+        //changeEgg3.addEventListener("click", changeEggImg(3));
+
 
 
     </script>
