@@ -35,6 +35,7 @@
 
         let eggClosedImg = "img/egg1-closed.png";
         let eggOpenImg = "img/egg2-open.png";
+        let eggDoubleImg = "img/egg3-double.png";
 
 
         let changeEgg1 = document.getElementById("changeEgg1");
@@ -47,6 +48,26 @@
 
         let egg;
 
+        function changeEggImg() {
+
+            if (eggsIndex >= eggs.length)
+                eggsIndex = 0;
+
+            if (eggsIndex == 0) {
+                egg1.src = eggOpenImg;
+                eggsIndex++;
+            }
+            else if (eggsIndex == 1) {
+                egg1.src = eggDoubleImg;
+                eggsIndex++;
+            }
+            else if (eggsIndex == 2) {
+                egg1.src = eggClosedImg;
+                eggsIndex++;
+            }
+        }
+
+        changeEgg1.addEventListener("click", changeEggImg);
 
         function updateStatus() {
             let eggToChange = 'egg';
@@ -63,15 +84,10 @@
 
         let eggNumber = 1;
 
-        function changeEggImg() {
-            alert('changing egg');
-
-        }
-
-        changeEgg1.addEventListener("click", () => {
-            changeEggImg();
-            updateStatus();
-        });
+        //changeEgg1.addEventListener("click", () => {
+        //    changeEggImg();
+        //    updateStatus();
+        //});
         //changeEgg2.addEventListener("click", changeEggImg(2));
         //changeEgg3.addEventListener("click", changeEggImg(3));
 
