@@ -42,29 +42,36 @@
         let changeEgg3 = document.getElementById("changeEgg3");
 
 
-        let eggStatus = [1, 2, 3];
+        let eggs = ['1', '2', '3'];
+        let eggsIndex = 0;
 
         let egg;
 
 
         function updateStatus() {
+            let eggToChange = 'egg';
+
+            if (eggsIndex >= eggs.length)
+                eggsIndex = 0;
+
+            eggsIndex++;
+            egg = eggToChange + eggsIndex;
+
+            document.getElementById(egg).src = eggOpenImg;
 
         }
 
         let eggNumber = 1;
 
-        function changeEggImg(eggNumber) {
+        function changeEggImg() {
             alert('changing egg');
 
-            let eggToChange = 'egg';
-            egg = eggToChange + 2;
-
-            document.getElementById(egg).src = eggOpenImg;
-
-            //egg1.src = eggOpenImg;
         }
 
-        changeEgg1.addEventListener("click", changeEggImg);
+        changeEgg1.addEventListener("click", () => {
+            changeEggImg();
+            updateStatus();
+        });
         //changeEgg2.addEventListener("click", changeEggImg(2));
         //changeEgg3.addEventListener("click", changeEggImg(3));
 
